@@ -146,7 +146,7 @@ class AdministrativeCommunication(models.Model):
         self.state = 'completed'
 
         message = "تم الانتهاء من التقييم الخاص بك من %s" % self.manager_id.name
-        self.make_notification(message, self.employee_id.id)
+        # self.make_notification(message, self.employee_id.id)
 
         activity_obj = self.env['mail.activity'].sudo().search([('res_id', '=', self.id),
                                                                 ('user_id', '=', self.manager_id.user_id.id)])

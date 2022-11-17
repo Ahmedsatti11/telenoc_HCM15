@@ -140,7 +140,7 @@ class HrAppraisal(models.Model):
 
             self.create_activity(employee, appraisal_id)
             message = "تم اسناد نموذج تقييم اليك خاص بالموظف %s" % self.employee_id.name
-            self.make_notification(message, employee)
+            # self.make_notification(message, employee)
         employee_message = "تم انشاء نموذج تقييم لك"
         self.make_my_special_notification(employee_message, self.employee_id.id)
         return res
